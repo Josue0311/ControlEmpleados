@@ -1,0 +1,14 @@
+body{
+    background: #174e41;
+}
+.img{
+    width: 60px;
+    height: 60px;
+}
+.nav{
+    background: #53b496;
+}
+.custom-table{
+    background-color: #214037 !important;
+    border-radius: 10px;
+}

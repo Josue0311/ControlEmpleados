@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../../../assets/Home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+h1{
+    font-size: 60px;
+}
+button{
+    font-size: 30px;
+}
+
+.background-container {
+    background-color: rgba(255, 255, 255, 0.261);
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
