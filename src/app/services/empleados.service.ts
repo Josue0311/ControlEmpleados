@@ -12,4 +12,11 @@ export class EmpleadosService {
   getEmpleados(){
     return this.http.get(`${this.BackendURL}api/get/empleados`)
   }
+
+  getVistaEmpleados(){
+    return this.http.get(`${this.BackendURL}api/get/vista-empleados`)
+  }
+  eliminar(id: number){
+    return this.http.delete(`${this.BackendURL}api/delete/empleados/${id}`)
+  }
 }

@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/internal/Observable';
-
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class RegistroNuevoEmpleadoService {
   private BackendURL='http://localhost:3000/'
 
   constructor(private http: HttpClient) { }
 
-  login(dato:any): Observable<any>{
-    return this.http.post(`${this.BackendURL}api/login`, dato)
+  RegistrarEmpleado(dato:any){
+    return this.http.post(`${this.BackendURL}api/post/empleados`, dato)
   }
 }

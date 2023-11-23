@@ -1,0 +1,57 @@
+
+<div class="navv">
+    <nav class="navbar navbar-expand navbar-light">
+        <img src="assets/Logo.png" alt="" class="img">
+        <a id="DAgnostic" class="navbar-brand" >Nombre de la empresa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end " id="navbarNavAltMarkup">
+            <div class="navbar-nav ">
+                <li class="nav-item mx-2">
+                    <a class="nav-link active text-white" aria-current="page" routerLink="/inicio">Inicio</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link active text-white" aria-current="page" routerLink="/calendario">Calendario</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link active text-white" aria-current="page" routerLink="/empleados">Empleados</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link active text-white" aria-current="page" routerLink="/registro-nuevo-empleado">Registrar Nuevo
+                        Empleado</a>
+                </li>
+
+                
+                <li class="nav-item dropdown">
+
+                
+                <li class="nav-item dropdown perfil">
+
+
+                    <div class="opciones">
+                        <div class="dropdown pb-4">
+                            <a href="#"
+                                class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                                id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <!-- <img [src]="imagePerfil || '../../../assets/usuario-perfil.jpg'" alt="hugenerd"
+                                    width="30" height="30" class="rounded-circle"> -->
+                                <span class="d-none d-sm-inline mx-1">Usuario</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                                <li><a class="dropdown-item" routerLink="/Editar-Perfil-Admin/:id">Perfil</a></li>
+                                <li><a class="dropdown-item" routerLink="/resultados">Ayuda</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li><a class="dropdown-item"  routerLink="">Salir</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </nav>
+</div>

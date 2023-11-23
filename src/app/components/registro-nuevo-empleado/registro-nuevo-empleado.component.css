@@ -1,0 +1,56 @@
+.img{
+    width: 60px;
+    height: 60px;
+}
+.nav{
+    background: #53b496;
+}
+.custom-table{
+    background-color: #214037 !important;
+    border-radius: 10px;
+}
+
+input {
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    padding: 0px 2px;
+    font-family: 'Poppins', sans-serif
+}
+select{
+    border: none;
+ 
+}
+
+.form-control:focus {
+    border-color: transparent; /* Elimina el color del borde */
+    box-shadow: none; /* Elimina la sombra del borde */
+}
+.input-field {
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #214037;
+    color: #214037
+}
+
+.input-field:hover {
+    color: #53b496;
+    border: 2px solid #53b496;
+}
+
+
+
+/* Estilo para quitar el borde y fondo del botón */
+.input-field button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+button{
+    width: 150px;
+    height: 60px;
+}

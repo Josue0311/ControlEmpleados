@@ -8,10 +8,236 @@
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, #6abe9e, #6abe9e)
 }
-.card-color{
+
+.card-color {
     background: #2e735e;
 }
-.img{
+
+.img {
     width: 120px;
     height: 120px;
+}
+
+#imgLogin {
+    height: 500px;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+    padding: 0px 2px;
+    font-family: 'Poppins', sans-serif
+}
+
+.form-control:focus {
+    border-color: transparent;
+    /* Elimina el color del borde */
+    background-color: transparent;
+    box-shadow: none;
+    /* Elimina la sombra del borde */
+}
+
+.input-field {
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    color: #ffffff
+}
+
+.input-field:hover {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+
+
+/* Estilo para quitar el borde y fondo del botón */
+.input-field button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.custom-icon-color {
+    color: #ffffff;
+}
+
+.p {
+    font-size: 45px;
+}
+
+h5 {
+    font-size: 25px;
+}
+
+label {
+    font-size: 18px;
+    ;
+}
+
+::placeholder {
+    font-size: 15px;
+
+}
+
+button {
+    border: none;
+}
+
+#alert {
+    font-size: 20px;
+}
+
+.btn-custom {
+    background-color: #ffffff;
+    background: linear-gradient(to right, #6abe9e, #6abe9e);
+    color: #ffffff;
+    /* Cambia el color del texto a blanco */
+}
+
+.button-entrar {
+    border: none;
+    white-space: nowrap;
+    width: 290px;
+}
+
+
+
+@media (max-width: 1025px) {
+    .logotext {
+        background-image: none;
+        height: 60px;
+        width: 60px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    h5 {
+        font-size: 22px;
+    }
+
+    label {
+        font-size: 18px;
+        ;
+    }
+
+    ::placeholder {
+        font-size: 15px;
+
+    }
+
+    .button-entrar {
+        margin: 0 5px;
+        border: none;
+        white-space: nowrap;
+        width: 90px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .button-crear {
+        margin: 0 5px;
+        border: none;
+        white-space: nowrap;
+        width: 90px;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logotext {
+        background-image: none;
+        height: 55px;
+        width: 55px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    label {
+        font-size: 15px;
+        ;
+    }
+
+    ::placeholder {
+        font-size: 14px;
+
+    }
+
+    .button-entrar {
+        margin: 0 5px;
+        border: none;
+        white-space: nowrap;
+        width: 80px;
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .button-crear {
+        margin: 0 5px;
+        border: none;
+        white-space: nowrap;
+        width: 140px;
+        height: 50px;
+        font-size: 12px;
+    }
+
+    #alert {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .logotext {
+        background-image: none;
+        height: 50px;
+        width: 50px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 12px;
+        ;
+    }
+
+    ::placeholder {
+        font-size: 8px;
+
+    }
+
+    .button-entrar {
+        margin: 0 5px;
+        border: none;
+        width: 70px;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .button-crear {
+        margin: 0 5px;
+        border: none;
+        width: 115px;
+        height: 30px;
+        font-size: 10px;
+    }
 }

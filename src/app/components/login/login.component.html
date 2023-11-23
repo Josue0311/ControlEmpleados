@@ -7,23 +7,39 @@
                         <div class="card-body py-4 text-center">
                             <div class="">
                                 <img src="assets/Logo.png" alt="" class="img">
-                                <h2 class="fw-bold mb-2 text-uppercase">Inicio de seción</h2>
+                                <h2 class="fw-bold mb-2 text-uppercase">Inicio de sesión</h2>
                                 <p class="text-white-50 mb-3">¡Por favor, introduce tu usuario y contraseña!</p>
-                                <div class="form-outline form-white mb-4 mx-4">
-                                    <div class="" style="text-align: left;">
-                                        <label class="form-label" for="typeEmailX" >Usuario</label>
+                                <form [formGroup]="forms" (ngSubmit)="crear()">
+                                    <div class="form-outline mb-3 mx-1 mx-lg-4 mx-xl-5">
+                                        <label class="form-label fw-bold" for="input1">Correo Electronico</label>
+                                        <div class="form-group input-field">
+                                            <i class="bi bi-person bi-2x mx-1"></i>
+                                            <input type="text" class="form-control py-1" id="input1" formControlName="email"
+                                            placeholder="Ingrese su email" />
+                                        </div>
                                     </div>
-                                    <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                                </div>
-                                <div class="form-outline form-white mb-4 mx-4">
-                                    <div class="" style="text-align: left;">
-                                        <label class="form-label" for="typePasswordX" >Contraseña</label>
+                                    <div class="form-outline mb-3 mx-1 mx-lg-4 mx-xl-5">
+                                        <div class="form-group text-left">
+                                            <label for="input2" class="form-label fw-bold">Contraseña</label>
+                                            <div class="input-field">
+                                                <i class="bi bi-lock bi-2x mx-1"></i>
+                                                <input [type]="mostrarPassword ? 'text' : 'password'" id="input2"
+                                                    formControlName="password" placeholder="Ingrese su contraseña"
+                                                    class="form-control py-1" />
+                                                <button type="button" class="" (click)="mostrarContra()">
+                                                    <i class="bi bi-eye{{ mostrarPassword ? '-slash' : '' }} custom-icon-color"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                    <div class="text-center justify-content-between mt-3 mb-4">
+                                        <button class="button-entrar btn btn-custom btn-dark btn-lg btn-block" type="button"
+                                            (click)="entrar()">Iniciar Sesión</button>
                                     </div>
                                     
-                                    <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                                </div>
-                                <button class="btn btn-outline-light btn-lg px-5" type="submit" routerLink="/empleados">Iniciar Seción</button>
-                            </div>
+                                </form>
+                            </div>  
                         </div>
                     </div>
                 </div>

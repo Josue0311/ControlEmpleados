@@ -1,0 +1,33 @@
+nav {
+    background: #45B39D ;
+}
+
+nav a {
+    color: white;
+}
+
+.opciones {
+    padding-top: 5px;
+    padding-left: 10px;
+    color: white;
+}
+
+.espace {
+    margin-right: 15px;
+}
+
+.perfil {
+    margin-right: 100px;
+}
+
+li {
+    margin-right: 15px;
+    color: white;
+}
+a{
+    color: white;
+}
+.img{
+    width: 60px;
+    height: 60px;
+}

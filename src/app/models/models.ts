@@ -1,5 +1,4 @@
 export interface Empleados {
-    EmpleadoID: number;
     Nombre: string;
     Apellido: string;
     FechaNacimiento: Date;
@@ -7,4 +6,12 @@ export interface Empleados {
     Telefono: string;
     CorreoElectronico: string;
     DepartamentoID: number;
+}
+export interface Login{
+    Usuario:string,
+    Contraseña:string
+}
+export interface Departamentos{
+    DepartamentoID:string,
+    NombreDepartamento:string
 }

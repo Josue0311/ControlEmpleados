@@ -1,69 +1,62 @@
-<nav class="navbar navbar-expand-lg  nav">
-    <div class="container-fluid">
-        <img src="assets/Logo.png" alt="" class="img">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item mx-2">
-                    <a class="nav-link active" aria-current="page" routerLink="">Inicio</a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link active" aria-current="page" routerLink="/empleados">Calendario</a>
-                </li>
-                <li class="nav-item dropdown mx-2">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link active" aria-current="page" routerLink="/empleados">Registrar Nuevo Empleado</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-    </div>
-</nav>
+<app-navbar></app-navbar>
 
-<body class="vh-100 d-flex align-items-center justify-content-center">
-    <div class="container ">
+<body>
+    <div class="container mt-3 mb-5">
         <div class="row">
             <div class="col">
-                <table class="table table-success table-striped table-bordered rounded">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido</th>
-                            <th scope="col">Dirección</th>
-                            <th scope="col">Telefono</th>
-                            <th scope="col">Correo Electronico</th>
-                        </tr>
-                    </thead>
-                    <tbody class="table-group-divider">
-                        <tr *ngFor="let e of empleados">
-                            <td>{{ e.Nombre }}</td>
-                            <td>{{ e.Apellido }}</td>
-                            <td>{{ e.Direccion }}</td>
-                            <td>{{ e.Telefono }}</td>
-                            <td>{{ e.CorreoElectronico }}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-center">
+                            Lista De Empleados
+                        </h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3 mx-3">
+                        <div class="btn-group">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-funnel-fill"> </i> Filtro
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Departamento</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-med-3"></div>
+                    <div class="col-md-5 mb-3 text-right">
+                        <form class="form-inline">
+                            <div class="input-group">
+                                <input name="buscar" class="form-control rounded" placeholder="Buscar">
+                                <div class="input-group-append mx-2">
+                                    <button type="submit" class="btn btn-primary"><i
+                                            class="bi bi-search mr-2"></i>Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-sm-12 col-md-4 col-lg-3 col-xl-3" *ngFor="let empleado of this.empleado">
+                            <div class="card rounded shadow custom-card mb-3 ml-3" style="width: 240px; height: 240px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{empleado.Nombre}} {{empleado.Apellido}}</h5>
+                                    <p class="card-text">Departamento: {{empleado.Departamento}}</p>
+                                    <p class="card-text">Puesto: {{empleado.Puesto}}</p>
+                                </div>
+                                <div class="" style="text-align: center; ">
+                                    <a  class="btn btn-success custom-width mb-3 mx-1" ><i class="bi bi-pencil-square"></i> Editar</a>
+                                    <a  class="btn btn-danger custom-width mb-3 mx-1" (click)="eliminar(empleado.ID)"> <i class="bi bi-trash-fill"></i> Eliminar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
+<app-footer></app-footer>
